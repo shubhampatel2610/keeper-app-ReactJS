@@ -8,7 +8,7 @@ function CreateArea(props) {
     setNote((prevNote) => {
       return {
         ...prevNote,
-        [name]: value
+        [name]: value,
       };
     });
   }
@@ -18,7 +18,7 @@ function CreateArea(props) {
     event.preventDefault();
     setNote({
       title: "",
-      content: ""
+      content: "",
     });
   }
 
@@ -29,13 +29,13 @@ function CreateArea(props) {
           name="title"
           onChange={handleChange}
           value={note.title}
-          placeholder="Title"
+          placeholder="Give a title"
         />
         <textarea
           onChange={handleChange}
           name="content"
           value={note.content}
-          placeholder="Take a note..."
+          placeholder="Write a note..."
           rows="3"
         />
         <button onClick={submitNote}>Add</button>
